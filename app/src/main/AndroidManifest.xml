@@ -16,21 +16,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CameraActivity"></activity>
+        <activity android:name=".CameraActivity" />
 
         <provider
-            android:authorities="${applicationId}"
             android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}"
             android:exported="false"
             android:grantUriPermissions="true">
-
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider" >
-
-            </meta-data>
+                android:resource="@xml/provider" />
         </provider>
 
+        <activity android:name=".ClientesActivity" />
+        <activity android:name=".NewClienteActivity" />
+        <activity android:name=".ClienteDetailActivity"></activity>
     </application>
 
 </manifest>

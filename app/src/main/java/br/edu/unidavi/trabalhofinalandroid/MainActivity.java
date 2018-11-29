@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonMapa;
     private File imagem;
     private Button buttonPermisao;
+    private Button buttonActivityClientes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
         buttonCamera = findViewById(R.id.button_camera);
         buttonMapa = findViewById(R.id.button_mapa);
         buttonPermisao = findViewById(R.id.button_permissao);
+        buttonActivityClientes = findViewById(R.id.button_activity_clientes);
+
+        buttonActivityClientes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), ClientesActivity.class));
+            }
+        });
 
         buttonCamera.setOnClickListener(new View.OnClickListener() {
             @Override
